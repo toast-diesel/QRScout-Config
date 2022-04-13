@@ -1,0 +1,246 @@
+{
+  "$schema": "../schema.json",
+  "title": "QRScout",
+  "page_title": "Rapid React 3467 v3",
+  "sections": [
+    {
+      "name": "Prematch",
+      "preserveDataOnReset": true,
+      "fields": [
+        {
+          "title": "Scouter Initials",
+          "type": "text",
+          "required": true,
+          "code": "scouter"
+        },
+        {
+          "title": "Match Number",
+          "type": "number",
+          "required": true,
+          "code": "matchNumber"
+        },
+        {
+          "title": "Location",
+          "type": "select",
+          "required": true,
+          "code": "robot",
+          "choices": {
+            "r1": "Red 1",
+            "b1": "Blue 1",
+            "r2": "Red 2",
+            "b2": "Blue 2",
+            "r3": "Red 3",
+            "b3": "Blue 3"
+          },
+          "defaultValue": "r1"
+        },
+        {
+          "title": "Team Number",
+          "type": "number",
+          "required": true,
+          "code": "teamNumber"
+        },
+        {
+          "title": "No Show",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false,
+          "code": "noShow"
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "fields": [
+        {
+            "code": "at",
+            "title": "Taxied?",
+            "type": "boolean",
+            "defaultValue": false,
+            "required": false
+        },
+        {
+          "code": "au",
+          "title": "Upper Cargo Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "al",
+          "title": "Lower Cargo Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "am",
+          "title": "Cargo Missed",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "ac",
+          "title": "Picked up more cargo?",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "fields": [
+        {
+          "code": "tu",
+          "title": "Upper Cargo Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "tl",
+          "title": "Lower Cargo Scored",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },
+        {
+          "code": "tm",
+          "title": "Cargo Missed",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Endgame",
+      "fields": [
+        {
+          "code": "ch",
+          "title": "Climb Height",
+          "type": "select",
+          "choices": {
+            "l": "Low bar",
+            "m": "Mid bar",
+            "h": "High bar",
+            "t": "Traversal bar",
+            "f": "Climb failed",
+            "x": "Did not climb"
+          },
+          "defaultValue": "x",
+          "required": false
+        },
+        {
+            "code": "ct",
+            "title": "Started to climb at t=",
+            "type": "select",
+            "choices": {
+              "1": "0-10 secs",
+              "2": "11-20 secs",
+              "3": "21-30 secs",
+              "4": "31-40 secs",
+              "5": "41+ secs",
+              "0": "Did not climb"
+            },
+            "defaultValue": "0",
+            "required": false
+        },
+        {
+          "code": "cn",
+          "title": "# of alliance bots climbed",
+          "type": "select",
+          "choices": {
+            "0": "0",
+            "1": "1",
+            "2": "2",
+            "3": "3"
+          },
+          "defaultValue": 0,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Postmatch",
+      "fields": [
+        {
+          "code": "ds",
+          "title": "Driver Skill",
+          "type": "select",
+          "choices": {
+            "1": "Not Effective",
+            "2": "Average",
+            "3": "Very Effective",
+            "0": "Not Observed"
+          },
+          "defaultValue": "0",
+          "required": false
+        },
+        {
+            "code": "dp",
+            "title": "Defense Played",
+            "type": "select",
+            "choices": {
+              "1": "Not Very Effective",
+              "2": "Average",
+              "3": "Very Effective",
+              "0": "None played"
+            },
+            "defaultValue": "0",
+            "required": false
+        },
+        {
+          "code": "sd",
+          "title": "Suseptible to Defense",
+          "type": "select",
+          "choices": {
+            "1": "Not Suseptible",
+            "2": "Average",
+            "3": "Very Suseptible",
+            "0": "Not Observed"
+          },
+          "defaultValue": "0",
+          "required": false
+        },
+        {
+          "code": "d",
+          "title": "Died",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "to",
+          "title": "Tipped Over",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "cd",
+          "title": "Yellow/Red Card",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "co",
+          "title": "Comments",
+          "type": "text",
+          "min": 0,
+          "max": 144,
+          "required": false
+        }
+      ]
+    }
+  ]
+}
