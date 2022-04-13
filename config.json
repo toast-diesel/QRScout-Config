@@ -1,7 +1,7 @@
 {
   "$schema": "../schema.json",
   "title": "QRScout",
-  "page_title": "Rapid React 3467 v3.1",
+  "page_title": "Rapid React 3467 v2.11",
   "sections": [
     {
       "name": "Prematch",
@@ -119,14 +119,6 @@
           "min": 0,
           "required": false
         },
-        {
-            "code": "ts",
-            "title": "Cycles done",
-            "type": "counter",
-            "defaultValue": 0,
-            "min": 0,
-            "required": false
-        }
       ]
     },
     {
