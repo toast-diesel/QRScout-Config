@@ -118,6 +118,14 @@
           "defaultValue": 0,
           "min": 0,
           "required": false
+        },
+        {
+            "code": "ts",
+            "title": "Cycles done",
+            "type": "counter",
+            "defaultValue": 0,
+            "min": 0,
+            "required": false
         }
       ]
     },
