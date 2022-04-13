@@ -1,7 +1,7 @@
 {
   "$schema": "../schema.json",
   "title": "QRScout",
-  "page_title": "Rapid React 3467 v3",
+  "page_title": "Rapid React 3467 v3.1",
   "sections": [
     {
       "name": "Prematch",
